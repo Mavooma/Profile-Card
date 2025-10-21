@@ -1,88 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Card</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Poppins:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card - Stage 0 Task</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <div id="loader">
-        <div class="spinner"></div>
-        <p>Loading profile...</p>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <article class="profile-card" data-testid="test-profile-card">
+    <figure class="avatar">
+      <img src="Vuyelwa Mavuma.png" alt="User Avatar" data-testid="test-user-avatar" />
+    </figure>
+
+    <div class="profile-info">
+      <header>
+        <h2 data-testid="test-user-name">Vuyelwa Mavuma</h2>
+      </header>
+
+      <p data-testid="test-user-bio">
+        Passionate front-end developer and tech enthusiast, committed to
+        building beautiful, functional, and accessible web experiences.
+      </p>
+
+      <p class="timestamp">
+        Current Time (ms):
+        <span data-testid="test-user-time" id="user-time"></span>
+      </p>
+
+      <nav class="social-links" data-testid="test-user-social-links">
+        <ul>
+          <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a></li>
+          <li><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+        </ul>
+      </nav>
+
+      <section class="lists">
+        <div class="list-section">
+          <h3>Hobbies</h3>
+          <ul data-testid="test-user-hobbies">
+            <li>Coding</li>
+            <li>Design</li>
+            <li>Traveling</li>
+          </ul>
+        </div>
+
+        <div class="list-section">
+          <h3>Dislikes</h3>
+          <ul data-testid="test-user-dislikes">
+            <li>Procrastination</li>
+            <li>Clutter</li>
+            <li>Negative energy</li>
+          </ul>
+        </div>
+      </section>
     </div>
+  </article>
 
-    <main>
-        <article data-testid="test-profile-card" class="profile-card" hidden>
-            <div class="card-left">
-                <figure class="avatar-container">
-                    <img data-testid="test-user-avatar" src="https://i.pravatar.cc/200" alt="User avatar" />
-                </figure>
-
-                <div class="profile-content">
-                    <header>
-                        <h2 data-testid="test-user-name">Mavooma</h2>
-                    </header>
-
-                    <p data-testid="test-user-bio">
-                        Software developer with a love for creative problem-solving,
-                        community, and clean code. Always exploring new tech and building
-                        cool stuff.
-                    </p>
-
-                    <p class="time">
-                        Current time (ms):
-                        <span data-testid="test-user-time" id="time"></span>
-                    </p>
-
-                    <div class="lists-row">
-                        <section>
-                            <h3>Hobbies</h3>
-                            <ul data-testid="test-user-hobbies">
-                                <li>Gaming</li>
-                                <li>Designing UIs</li>
-                                <li>Traveling</li>
-                            </ul>
-                        </section>
-
-                        <section>
-                            <h3>Dislikes</h3>
-                            <ul data-testid="test-user-dislikes">
-                                <li>Space mono font family</li>
-                                <li>Slow Wi-Fi</li>
-                                <li>Unclear documentation</li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-            </div>
-
-            <nav data-testid="test-user-social-links" class="social-links" aria-label="Social links">
-                <ul>
-                    <li><a data-testid="test-user-social-twitter" href="https://instagram.com" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a></li>
-                    <li><a data-testid="test-user-social-github" href="https://github.com" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                        </a></li>
-                    <li><a data-testid="test-user-social-linkedin" href="https://linkedin.com" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        </a></li>
-                </ul>
-            </nav>
-        </article>
-    </main>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
